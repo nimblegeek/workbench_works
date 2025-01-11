@@ -3,65 +3,55 @@ import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen">
-      {/* Hero Section */}
-      <section className="container py-24 md:py-32">
-        <div className="max-w-[640px] space-y-4">
-          <h1 className="text-4xl font-medium tracking-tight md:text-5xl">
-            Stories of Craft & Dedication
-          </h1>
-          <p className="text-xl text-muted-foreground">
-            Discover inspiring stories of artisans and find the perfect workbench for your craft.
-          </p>
-          <div className="flex gap-4 pt-4">
-            <Link href="/stories">
-              <Button size="lg">Explore Stories</Button>
-            </Link>
-            <Link href="/workbenches">
-              <Button size="lg" variant="outline">Browse Workbenches</Button>
-            </Link>
+    <div className="min-h-screen bg-background">
+      <div className="container max-w-5xl mx-auto px-4">
+        <section className="py-24 md:py-32 border-b">
+          <div className="max-w-2xl">
+            <h1 className="text-4xl/tight md:text-5xl/tight font-light mb-6">
+              Preserving the legacy of craftsmanship through stories and shared wisdom.
+            </h1>
+            <p className="text-lg text-muted-foreground">
+              A digital archive documenting artisans and their craft.
+            </p>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Featured Sections */}
-      <section className="border-t bg-muted/40">
-        <div className="container py-24 space-y-24">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-4">
-              <h2 className="text-3xl font-medium">Craftsmanship Stories</h2>
-              <p className="text-muted-foreground">
-                Read inspiring stories of artisans worldwide who dedicate their lives to preserving and advancing their craft.
-              </p>
+        <section className="grid grid-cols-1 md:grid-cols-[2fr,1fr] gap-12 py-24">
+          <div className="space-y-12">
+            <div>
+              <h2 className="text-xs uppercase tracking-wide text-muted-foreground mb-6">Featured Stories</h2>
+              <div className="space-y-1">
+                <h3 className="text-2xl font-light">Stories of Artisans</h3>
+                <p className="text-muted-foreground">
+                  Personal narratives from craftsmen sharing their journey, techniques, and expertise.
+                </p>
+              </div>
               <Link href="/stories">
-                <Button variant="outline">Read Stories</Button>
+                <Button variant="link" className="mt-4 p-0">
+                  Browse stories →
+                </Button>
               </Link>
             </div>
-            <img 
-              src="https://images.unsplash.com/photo-1722411927625-0e478acf502b"
-              alt="Craftsman at work"
-              className="aspect-[4/3] object-cover rounded-lg"
-            />
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-4 md:order-2">
-              <h2 className="text-3xl font-medium">Premium Workbenches</h2>
-              <p className="text-muted-foreground">
-                Find meticulously crafted workbenches that provide the perfect foundation for your creative work.
-              </p>
+          <div className="space-y-12">
+            <div>
+              <h2 className="text-xs uppercase tracking-wide text-muted-foreground mb-6">Collection</h2>
+              <div className="space-y-1">
+                <h3 className="text-2xl font-light">Premium Workbenches</h3>
+                <p className="text-muted-foreground">
+                  Curated selection of artisan-crafted workbenches.
+                </p>
+              </div>
               <Link href="/workbenches">
-                <Button variant="outline">View Collection</Button>
+                <Button variant="link" className="mt-4 p-0">
+                  View collection →
+                </Button>
               </Link>
             </div>
-            <img 
-              src="https://images.unsplash.com/photo-1557176312-4c3befef1556"
-              alt="Workbench"
-              className="aspect-[4/3] object-cover rounded-lg md:order-1"
-            />
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </div>
   );
 }
